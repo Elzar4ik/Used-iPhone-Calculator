@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оцінка вартості iPhone</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Оцінка вартості вживаного iPhone</h1>
+
+        <form id="iphone-form">
+            <label for="sort">Сортувати моделі:</label>
+            <select id="sort" required>
+                <option value="newest">Від новіших до старіших</option>
+                <option value="oldest">Від старіших до новіших</option>
+            </select>
+
+            <label for="model">Модель iPhone:</label>
+            <select id="model" required>
+                <option value="">Оберіть модель</option>
+            </select>
+
+            <label for="memory">Обсяг пам'яті:</label>
+            <select id="memory" required>
+                <option value="">Оберіть пам'ять</option>
+            </select>
+
+            <label for="condition">Стан пристрою (0-10):</label>
+            <select id="condition" required>
+                <option value="10">10 - Новий</option>
+                <option value="9">9 - Дрібні потертості</option>
+                <option value="8">8 - Помітні потертості</option>
+                <option value="7">7 - Дуже помітний стан використання</option>
+                <option value="6">6 - Задовільний стан</option>
+                <option value="5">5 - Посередній стан</option>
+                <option value="4">4 - Сильно використаний</option>
+                <option value="3">3 - Поганий стан</option>
+                <option value="2">2 - Дуже поганий стан</option>
+                <option value="1">1 - Критичний стан</option>
+                <option value="0">0 - Сміття</option>
+            </select>
+
+            <label>Ремонт:</label>
+            <div id="repair-section"></div>
+            <button type="button" id="add-repair">Додати ремонт</button>
+
+            <label for="dollar-rate">Курс долара:</label>
+            <input type="number" id="dollar-rate" value="42" step="0.01" required>
+
+            <label for="currency">Валюта:</label>
+            <select id="currency" required>
+                <option value="UAH">Гривня</option>
+                <option value="USD">Долар</option>
+            </select>
+
+            <button type="button" onclick="calculatePrice()">Розрахувати вартість</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
