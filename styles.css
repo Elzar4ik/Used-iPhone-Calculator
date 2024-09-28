@@ -60,6 +60,15 @@ button:hover {
     background-color: #0056b3;
 }
 
+.repair-buttons {
+    display: flex;
+    justify-content: space-between; /* Align buttons horizontally */
+}
+
+.repair-buttons button {
+    flex: 1; /* Make buttons take equal width */
+}
+
 #result {
     background-color: #264d2b;
     padding: 15px;
